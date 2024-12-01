@@ -2,7 +2,9 @@
 (ns day01
   {:nextjournal.clerk/auto-expand-results? true
    :nextjournal.clerk/toc :collapsed}
-  (:require aoc))
+  (:require
+   aoc
+   [nextjournal.clerk :as clerk]))
 
 
 ;; # Day 1: Historian Hysteria
@@ -188,6 +190,28 @@
 
 
 
+
+;; ## Visualization
+;;
+;; Let's see if we can plot the distribution of the values in the right column.
+;;
+(let [right-freqs (frequencies (second columns))]
+  (clerk/plotly
+   {:config {:displayModeBar false}
+    :data [{:x (map key right-freqs)
+            :y (map val right-freqs)
+            :type :bar}]
+    :layout {:margin {:l 20 :r 0 :t 0 :b 20}}}))
+
+;; As expected, most of the elements have one occurrence, with few exceptions
+;; easily visible in the graph.\
+;; The winner is `77689` with 20 occurrences.
+
+
+
+
+
+
 ;; ## Conclusion
 ;;
 ;; Much easier Day 1 than we had last year.
@@ -195,15 +219,15 @@
 ;; These first days should be about having fun, not about chasing some edge
 ;; cases (_hello `oneight` my old friend..._).
 ;;
-;; Faster tasks mean more time for writing this "blog" and exploring
-;; different solutions.
+;; Faster tasks mean more time for writing this "blog", exploring
+;; different solutions, making visualizations, etc.
 ;; I hope this will continue in the next days too.
 ;;
 ;; Today's highlights:
 ;;
 ;; - `aoc/transpose` - get a list of columns from a list of rows
 ;; - `comp` - compose two functions
-;; - `frequencies` - count appearances of items
+;; - `frequencies` - count the number of appearances of items
 
 
 
