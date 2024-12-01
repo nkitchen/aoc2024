@@ -8,7 +8,7 @@ and/or use different language(s).
 Take a look:
 
 * [AoC 2015 in Nim, Python](https://github.com/narimiran/advent_of_code_2015)
-* [AoC 2016 in Python, Clojure](https://github.com/narimiran/advent_of_code_2016)
+* [AoC 2016 in Python, Clojure (+ visualizations)](https://github.com/narimiran/advent_of_code_2016)
 * [AoC 2017 in Nim, OCaml, Python](https://github.com/narimiran/AdventOfCode2017)
 * [AoC 2018 in Nim, Python, Racket](https://github.com/narimiran/AdventOfCode2018)
 * [AoC 2019 in OCaml, Python](https://github.com/narimiran/AdventOfCode2019)
@@ -53,5 +53,5 @@ Ok, now we're ready for...
 
 Task  | Notebook  | Comment
 ---   | ---       | ---
-[Day 01: ....](https://adventofcode.com/2024/day/1) | [day01.clj](clojure/day01) | Something easy, pretty please.
+[Day 01: Historian Hysteria](https://adventofcode.com/2024/day/1) | [day01.clj](clojure/day01) | Much easier than Day 1 2023. I like it!
 

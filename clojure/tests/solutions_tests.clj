@@ -12,7 +12,7 @@
 (defmacro check-day [day test-results real-results]
   (let [day        (format "%02d" day)
         full-day   (str "day" day)
-        main-func   (symbol full-day "-main")
+        main-func  (symbol full-day "-main")
         test-name  (symbol (str full-day "-test"))
         test-input (str day "_test")]
     `(deftest ~test-name
@@ -23,7 +23,7 @@
 
 
 
-(check-day 1 nil [2 44])
+(check-day 1 [11 31] [1222801 22545250])
 
 
 (let [summary (run-tests)]

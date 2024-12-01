@@ -4,7 +4,7 @@
 All my Advent of Code repos:
 
 * [AoC 2015 in Nim, Python](https://github.com/narimiran/advent_of_code_2015)
-* [AoC 2016 in Python, Clojure](https://github.com/narimiran/advent_of_code_2016)
+* [AoC 2016 in Python, Clojure (+ visualizations)](https://github.com/narimiran/advent_of_code_2016)
 * [AoC 2017 in Nim, OCaml, Python](https://github.com/narimiran/AdventOfCode2017)
 * [AoC 2018 in Nim, Python, Racket](https://github.com/narimiran/AdventOfCode2018)
 * [AoC 2019 in OCaml, Python](https://github.com/narimiran/AdventOfCode2019)
