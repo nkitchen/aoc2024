@@ -23,5 +23,12 @@ I like it _that_ much.
 To make things interesting (or at least different than the last year), this year I'll be using [Clerk notebooks](https://clerk.vision).
 To make this notebook format "work", I'll have to write the code in a different way than I usually do: I'll not just present the final solution, but the whole process from reading the input and then slowly building the required blocks until we come with the solution.
 
+
+
+## Solutions
+
+It is the best to _not_ read the raw code in this repo.
+Instead, read the notebooks.
+
 The notebooks are available at: https://narimiran.github.io/aoc2024
 

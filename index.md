@@ -53,5 +53,6 @@ Ok, now we're ready for...
 
 Task  | Notebook  | Comment
 ---   | ---       | ---
-[Day 01: Historian Hysteria](https://adventofcode.com/2024/day/1) | [day01.clj](clojure/day01) | Much easier than Day 1 2023. I like it!
+[Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1) | [day01.clj](clojure/day01) | Much easier than Day 1 2023. I like it!
+[Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [day02.clj](clojure/day02) | The Problem Dampener would be useful for AoC!
 

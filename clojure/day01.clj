@@ -224,10 +224,9 @@
 ;; I hope this will continue in the next days too.
 ;;
 ;; Today's highlights:
-;;
-;; - `aoc/transpose` - get a list of columns from a list of rows
-;; - `comp` - compose two functions
-;; - `frequencies` - count the number of appearances of items
+;; - `aoc/transpose`: get a list of columns from a list of rows
+;; - `comp`: compose two functions
+;; - `frequencies`: count the number of appearances of items
 
 
 
