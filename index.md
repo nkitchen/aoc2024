@@ -55,4 +55,5 @@ Task  | Notebook  | Comment
 ---   | ---       | ---
 [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1) | [day01.clj](clojure/day01) | Much easier than Day 1 2023. I like it!
 [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [day02.clj](clojure/day02) | The Problem Dampener would be useful for AoC!
+[Day 3: Mull It Over](https://adventofcode.com/2024/day/2) | [day03.clj](clojure/day03) | Regex and chill.
 
