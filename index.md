@@ -57,4 +57,5 @@ Task  | Notebook  | Comment
 [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [day02.clj](clojure/day02) | The Problem Dampener would be useful for AoC!
 [Day 3: Mull It Over](https://adventofcode.com/2024/day/3) | [day03.clj](clojure/day03) | Regex and chill.
 [Day 4: Ceres Search](https://adventofcode.com/2024/day/4) | [day04.clj](clojure/day04) | No Más!
+[Day 5: Ceres Search](https://adventofcode.com/2024/day/5) | [day05.clj](clojure/day05) | Easier than it looked initially.
 
