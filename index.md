@@ -58,4 +58,5 @@ Task  | Notebook  | Comment
 [Day 3: Mull It Over](https://adventofcode.com/2024/day/3) | [day03.clj](clojure/day03) | Regex and chill.
 [Day 4: Ceres Search](https://adventofcode.com/2024/day/4) | [day04.clj](clojure/day04) | No Más!
 [Day 5: Ceres Search](https://adventofcode.com/2024/day/5) | [day05.clj](clojure/day05) | Easier than it looked initially.
+[Day 6: Ceres Search](https://adventofcode.com/2024/day/6) | [day06.clj](clojure/day06) | The guard is always right!
 

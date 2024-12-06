@@ -8,7 +8,8 @@
          org.flatland/ordered            {:mvn/version "1.15.12"}
          io.github.engelberg/better-cond {:git/tag "v2.1.5" :git/sha "156bc5f"}
          criterium/criterium             {:mvn/version "0.4.6"}
-         io.github.nextjournal/clerk     {:mvn/version "0.17.1102"}}
+         io.github.nextjournal/clerk     {:mvn/version "0.17.1102"}
+         quil/quil                       {:mvn/version "4.3.1563"}}
  :aliases
  {:profile {:jvm-opts   ["-Djdk.attach.allowAttachSelf"]
             :extra-deps {com.clojure-goes-fast/clj-async-profiler {:mvn/version "1.4.0"}
@@ -20,7 +21,6 @@
                                             "clojure/aoc20*.clj"
                                             "clojure/day*.clj"]
                                     :index "index.md"}}
-  :viz     {:extra-deps {quil/quil {:mvn/version "4.3.1563"}}}
   :splint  {:extra-deps {io.github.noahtheduke/splint {:mvn/version "1.18.0"}}
             :main-opts  ["-m" "noahtheduke.splint"]}
   :debug   {:extra-deps {com.github.flow-storm/clojure        {:mvn/version "1.12.0-1"}
