@@ -57,6 +57,7 @@ Task  | Notebook  | Comment
 [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2) | [day02.clj](clojure/day02) | The Problem Dampener would be useful for AoC!
 [Day 3: Mull It Over](https://adventofcode.com/2024/day/3) | [day03.clj](clojure/day03) | Regex and chill.
 [Day 4: Ceres Search](https://adventofcode.com/2024/day/4) | [day04.clj](clojure/day04) | No Más!
-[Day 5: Ceres Search](https://adventofcode.com/2024/day/5) | [day05.clj](clojure/day05) | Easier than it looked initially.
-[Day 6: Ceres Search](https://adventofcode.com/2024/day/6) | [day06.clj](clojure/day06) | The guard is always right!
+[Day 5: Print Queue](https://adventofcode.com/2024/day/5) | [day05.clj](clojure/day05) | Easier than it looked initially.
+[Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6) | [day06.clj](clojure/day06) | The guard is always right!
+[Day 7: Bridge Repair](https://adventofcode.com/2024/day/7) | [day07.clj](clojure/day07) | Elephants ate my homework!
 

@@ -1,7 +1,7 @@
 (ns solutions-tests
   (:require
    day01 day02 day03 day04 day05
-   day06 ;day07 day08 day09 day10
+   day06 day07 ;day08 day09 day10
    ;; day11 day12 day13 day14 day15
    ;; day16 day17 day18 day19 day20
    ;; day21 day22 day23 day24 day25
@@ -29,6 +29,7 @@
 (check-day 4 [18 9] [2534 1866])
 (check-day 5 [143 123] [5091 4681])
 (check-day 6 [41 6] [5131 1784])
+(check-day 7 [3749 11387] [1985268524462 150077710195188])
 
 
 (let [summary (run-tests)]
