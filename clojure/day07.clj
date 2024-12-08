@@ -92,7 +92,7 @@
 ;; especially since finding suitable operators in part 2 is significantly slower,
 ;; e.g. the longest equations have 11 operations:
 ;; - part 1: `2^11 = 2048` potential operations to check
-;; - part 2: `3^11 = 177147` potential operations, 86 times more
+;; - part 2: `3^11 = 177,147` potential operations, 86 times more
 ;;
 ;; The [`group-by` function](https://clojuredocs.org/clojure.core/group-by)
 ;; will be useful once again: we'll split the equations in those that
@@ -107,19 +107,145 @@
 ;; and calculate the sum of the results of those which do.
 ;; In the end, we need to add the result from part 1.
 ;;
-(defn solve [equations]
+(defn valid-counts [pt1-check pt2-check equations]
   (let [{pt1-eqs true
-         pt2-eqs false} (group-by (comp some? valid-1?) equations)
+         pt2-eqs false} (group-by (comp some? pt1-check) equations)
         pt1 (aoc/sum-map first pt1-eqs)
         pt2 (->> pt2-eqs
-                 (pmap valid-2?)
+                 (pmap pt2-check)
                  (filter some?)
                  (reduce +)
                  (+ pt1))]
     [pt1 pt2]))
 
+
+(defn solve [equations]
+  (valid-counts valid-1? valid-2? equations))
+
 (solve example-equations)
 (solve equations)
+
+
+
+
+
+
+
+;; ## Optimized solution
+;;
+;; Although I'm repeatedly saying I'm not chasing performance this year,
+;; sometimes I cannot help myself.
+;; Especially when the potential benefits are huge.
+;;
+;; I've written above that for some equations we will have to do almost
+;; 200,000 combinations to see if one of them is valid for part 2.
+;; We could have a significant speedup if we could prune that search space.
+;; And there is a way to do that: start from the end and go backwards.
+;;
+;; Consider a case where an equation has two elements, `[a b]`.
+;; The multiplication is valid, obviously, only if `a * b = result`,
+;; i.e. we can _divide_ the `result` by `b` to get `a`.\
+;; But this also means in a larger equation that we can check if the result
+;; is divisible by the last element, and if it isn't: we don't consider
+;; multiplication as a valid operation.
+;;
+;; A similar check can be done for concatenation.
+;; The `a || b = result` operation is valid only if the `result` is `ab`,
+;; i.e. the `result` can be _split_ into `a` and `b`.
+;;
+;; To have an easier time going backwards, we will reverse our equations in
+;; the following way: `[res a b c d] --> [res d c b a]`, keeping the result
+;; in front and reversing the operations:
+;;
+(defn reverse-eq [[res & ops]]
+  (conj (rseq (vec ops)) res))
+
+
+;; To check if a multiplication operation is valid, we use `mod` to check if two
+;; numbers are divisible.
+;; But to check a concatenation operation, we need to write our own function:
+;;
+(defn concateable? [z y]
+  (let [d (loop [d 1]
+            (if (> d y) d
+                (recur (* 10 d))))]
+    (when (= y (mod z d))
+      (quot z d))))
+
+
+;; We're ready to write a function to check if an equation is valid.
+;; It looks similar to the original `valid-equation?` function, with the
+;; differences discussed above because we're going backwards:
+;;
+(defn backwards-valid? [res [z y & tail] concat-op?]
+  (let [valid-op (fn [x]
+                   (backwards-valid? res (conj tail x) concat-op?))]
+    (cond
+      (empty? tail) (when (= z y) res)
+      (> y z) nil
+      :else
+        (or (valid-op (- z y))
+            (and (zero? (mod z y))
+                 (valid-op (quot z y)))
+            (when-let [x (and concat-op? (concateable? z y))]
+              (valid-op x))))))
+
+
+(defn backwards-valid-1? [eq]
+  (backwards-valid? (first eq) eq false))
+
+(defn backwards-valid-2? [eq]
+  (backwards-valid? (first eq) eq true))
+
+
+;; For the optimized solution, we need to first prepare the equations by
+;; reversing them, and then we need to pass these new validation functions to
+;; the xisting `valid-counts` function we've originally used:
+;;
+(defn optimized-solve [equations]
+  (->> equations
+       (map reverse-eq)
+       (valid-counts backwards-valid-1? backwards-valid-2?)))
+
+(optimized-solve example-equations)
+(optimized-solve equations)
+
+
+
+
+;; ## Benchmarks
+;;
+;; It's not enough just to claim this new way is faster.
+;; Let's back it up with some data.
+;;
+;; [Again](./day01), we'll use the
+;; [`criterium` library](https://github.com/hugoduncan/criterium) for benchmarking.
+;;
+;; ```
+;; (require '[criterium.core :as c])
+;;
+;;
+;; (c/quick-bench (solve equations))
+;;
+;; Evaluation count : 6 in 6 samples of 1 calls.
+;;             Execution time mean : 220.572772 ms
+;;    Execution time std-deviation : 14.902858 ms
+;;   Execution time lower quantile : 204.924300 ms ( 2.5%)
+;;   Execution time upper quantile : 241.599678 ms (97.5%)
+;;                   Overhead used : 1.876035 ns)
+;;
+;;
+;; (c/quick-bench (optimized-solve equations))
+;;
+;; Evaluation count : 354 in 6 samples of 59 calls.
+;;             Execution time mean : 1.849690 ms
+;;    Execution time std-deviation : 159.477099 µs
+;;   Execution time lower quantile : 1.694980 ms ( 2.5%)
+;;   Execution time upper quantile : 2.027018 ms (97.5%)
+;;                   Overhead used : 1.876035 ns)
+;; ```
+
+;; More than 100 times faster!!
 
 
 
@@ -139,9 +265,13 @@
 ;; >
 ;; > — Jeff Erickson, Algorithms
 ;;
+;; The key to a good performance is to prune the search space.
+;; We achieve this by solving the equations backwards and immediately rejecting
+;; the operations which can't produce a valid solution.
 ;;
 ;; Today's highlights:
 ;; - `[a b & tail]`: unpack a seqence into its first two elements and all the rest
+;; - `rseq`: a faster way to reverse a vector than using `reverse`
 
 
 
@@ -153,4 +283,4 @@
 
 ^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn -main [input]
-  (solve (parse-data input)))
+  (optimized-solve (parse-data input)))
