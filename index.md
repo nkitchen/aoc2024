@@ -60,4 +60,5 @@ Task  | Notebook  | Comment
 [Day 5: Print Queue](https://adventofcode.com/2024/day/5) | [day05.clj](clojure/day05) | Easier than it looked initially.
 [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6) | [day06.clj](clojure/day06) | The guard is always right!
 [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7) | [day07.clj](clojure/day07) | Elephants ate my homework!
+[Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | [day08.clj](clojure/day08) | Hard to understand, easy to solve.
 

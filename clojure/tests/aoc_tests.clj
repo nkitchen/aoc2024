@@ -58,6 +58,11 @@
   (is (= 12 (aoc/manhattan pt2)))
   (is (= 13 (aoc/manhattan pt1 pt2)))
   (is (= [9 -2] (aoc/pt+ pt1 pt2)))
+  (is (= [5 -8] (aoc/pt- pt2 pt1)))
+  (is (= [-5 8] (aoc/pt- pt1 pt2)))
+  (is (= [4 6] (aoc/pt* 2 pt1)))
+  (is (= [-21 15] (aoc/pt* -3 pt2)))
+
 
   (is (aoc/inside? 10 5 7))
   (is (not (aoc/inside? 10 5 17)))
