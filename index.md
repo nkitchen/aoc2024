@@ -16,7 +16,7 @@ Take a look:
 * [AoC 2021 in Python, Racket](https://github.com/narimiran/AdventOfCode2021)
 * [AoC 2022 in Python, Clojure](https://github.com/narimiran/AdventOfCode2022)
 * [AoC 2023 in Clojure](https://github.com/narimiran/AdventOfCode2023)
-* [AoC 2024 in Clojure (Clerk notebooks)](https://github.com/narimiran/aoc2024)
+* [AoC 2024 in Clojure (Clerk notebooks)](https://github.com/narimiran/aoc2024) (this is a link to the repo)
 
 
 
@@ -61,4 +61,5 @@ Task  | Notebook  | Comment
 [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6) | [day06.clj](clojure/day06) | The guard is always right!
 [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7) | [day07.clj](clojure/day07) | Elephants ate my homework!
 [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | [day08.clj](clojure/day08) | Hard to understand, easy to solve.
+[Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9) | [day09.clj](clojure/day09) | Pt.2 was the hardest task so far.
 
