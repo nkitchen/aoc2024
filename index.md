@@ -62,4 +62,5 @@ Task  | Notebook  | Comment
 [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7) | [day07.clj](clojure/day07) | Elephants ate my homework!
 [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8) | [day08.clj](clojure/day08) | Hard to understand, easy to solve.
 [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9) | [day09.clj](clojure/day09) | Pt.2 was the hardest task so far.
+[Day 10: Hoof It](https://adventofcode.com/2024/day/10) | [day10.clj](clojure/day10) | Finally some pathfinding!
 

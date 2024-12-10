@@ -283,11 +283,13 @@
 
 (defn- traverse [algo {:keys [start end walls size size-x size-y
                               nb-func nb-num nb-cond end-cond
-                              cost-fn heuristic steps-limit]
+                              cost-fn heuristic steps-limit
+                              allow-revisits? side-effect]
                        :or {nb-num 4
                             walls  #{}
                             nb-cond (constantly true)
                             cost-fn (constantly 1)
+                            side-effect (constantly nil)
                             steps-limit ##Inf
                             end-cond  #(= end %)
                             heuristic (if end
@@ -309,7 +311,8 @@
                               :a-star (first (peek queue))
                               (peek queue))
             nb-cost     (fn [pt] (+ steps (cost-fn current pt)))
-            seen-filter (fn [pt] (< (nb-cost pt) (or (second (seen pt)) ##Inf)))]
+            seen-filter (fn [pt] (or allow-revisits?
+                                     (< (nb-cost pt) (or (second (seen pt)) ##Inf))))]
         (cond
           (or (nil? current)
               (>= steps steps-limit)
@@ -323,6 +326,7 @@
                       (filter (every-pred nb-filter seen-filter) (nb-func current))
                       (neighbours nb-num current (every-pred nb-filter seen-filter)))
                 nbs+costs (map (fn [pt] [pt (nb-cost pt)]) nbs)]
+            (side-effect current)
             (recur
              (reduce (fn [q [pt cost]]
                        (case algo
