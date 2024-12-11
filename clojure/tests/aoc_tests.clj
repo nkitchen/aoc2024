@@ -206,6 +206,14 @@
     (is (= (* 7 17) (aoc/lcm 7 17)))))
 
 
+(deftest count-digits
+  (testing "count digits"
+    (is (= 1 (aoc/count-digits 0)))
+    (is (= 1 (aoc/count-digits 1)))
+    (is (= 1 (aoc/count-digits -1)))
+    (is (= 2 (aoc/count-digits 99)))
+    (is (= 3 (aoc/count-digits 100)))))
+
 
 
 (let [summary (run-tests)]

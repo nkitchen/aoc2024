@@ -6,6 +6,7 @@
    :nextjournal.clerk/auto-expand-results? true
    :nextjournal.clerk/toc :collapsed}
   (:require [clojure.string :as str]
+            [clojure.math :as math]
             [clojure.data.int-map :as i]
             [clojure.data.priority-map :refer [priority-map]]
             [nextjournal.clerk :as clerk]))
@@ -438,6 +439,17 @@
    (/ (* a b)
       ^long (gcd a b))))
 
+
+(defn count-digits [n]
+  ;; Slightly faster than `((comp count str) n)`.
+  (cond
+    (zero? n) 1
+    (neg? n) (count-digits (- n))
+    :else (-> n
+              math/log10
+              math/floor
+              long
+              inc)))
 
 
 
