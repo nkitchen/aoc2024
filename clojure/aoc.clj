@@ -318,7 +318,7 @@
           (or (nil? current)
               (>= steps steps-limit)
               (end-cond current)) {:steps   steps
-                                   :seen    (keys seen)
+                                   :seen    (set (keys seen))
                                    :count   (count seen)
                                    :path    (build-path current seen)
                                    :current current}

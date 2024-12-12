@@ -64,4 +64,5 @@ Task  | Notebook  | Comment
 [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9) | [day09.clj](clojure/day09) | Pt.2 was the hardest task so far.
 [Day 10: Hoof It](https://adventofcode.com/2024/day/10) | [day10.clj](clojure/day10) | Finally some pathfinding!
 [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11) | [day11.clj](clojure/day11) | Episode VI: Return of the Lanternfish
+[Day 12: Garden Groups](https://adventofcode.com/2024/day/12) | [day12.clj](clojure/day12) | Turns = sides.
 
