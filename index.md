@@ -66,4 +66,5 @@ Task  | Notebook  | Comment
 [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11) | [day11.clj](clojure/day11) | Episode VI: Return of the Lanternfish
 [Day 12: Garden Groups](https://adventofcode.com/2024/day/12) | [day12.clj](clojure/day12) | Turns = sides.
 [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13) | [day13.clj](clojure/day13) | Kosmo Cramer!
+[Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14) | [day14.clj](clojure/day14) | Christmas egg: Easter tree.
 

@@ -90,6 +90,7 @@
 
 
 (def grid ["#.." "..#" "##."])
+(def grid-print ["█  " "  █" "██ "])
 (def walls {[0 0] \# , [2 1] \# , [0 2] \# , [1 2] \#})
 
 (deftest vec->map
@@ -97,6 +98,10 @@
 
 (deftest vec->set
   (is (= (set (keys walls)) (aoc/grid->point-set grid #{\#}))))
+
+(deftest points->lines
+  (is (= grid-print (aoc/points->lines walls)))
+  (is (= grid-print (aoc/points->lines (set (keys walls))))))
 
 (deftest graph-traversal
   (let [walls #{[0 1] [1 1] [1 3] [2 3] [3 0] [3 1] [3 2] [3 3]}

@@ -148,6 +148,18 @@
   ([v pred mult] (grid->point-set v pred mult)))
 
 
+;; Sometimes we need to inspect a grid.
+;; With `points->lines`, we create a list of points in each line.
+;;
+(defn points->lines [points]
+  (if (map? points) (points->lines (set (keys points)))
+      (let [x-lim (inc (reduce max (map first points)))
+            y-lim (inc (reduce max (map second points)))]
+        (for [y (range y-lim)]
+          (str/join (for [x (range x-lim)]
+                      (if (points [x y])
+                        \█ \space)))))))
+
 
 
 ;; ### 2D grids
@@ -451,6 +463,7 @@
               long
               inc)))
 
+;; (defn )
 
 
 
