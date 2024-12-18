@@ -168,7 +168,7 @@
 
 
 
-;; ## Visualization
+;; ## Animation
 ;;
 ;; Today, instead of a static image like in the previous days,
 ;; we can do an animation of the guard's path.
