@@ -70,4 +70,5 @@ Task                                                                    | Notebo
 [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)          | [day15.clj](clojure/day15)  | anim        | Sokoban.
 [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)           | [day16.clj](clojure/day16)  | viz         | Dijkstra.
 [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)  | [day17.clj](clojure/day17)  | bench       | Intcode meets Assembunny.
+[Day 18: RAM Run](https://adventofcode.com/2024/day/18)                 | [day18.clj](clojure/day18)  | viz         | [aMaze](https://narimiran.github.io/amaze/) :)
 

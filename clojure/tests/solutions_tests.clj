@@ -3,7 +3,7 @@
    day01 day02 day03 day04 day05
    day06 day07 day08 day09 day10
    day11 day12 day13 day14 day15
-   day16 day17 ;day18 day19 day20
+   day16 day17 day18 ;day19 day20
    ;; day21 day22 day23 day24 day25
    [clojure.test :refer [deftest is run-tests successful?]]))
 
@@ -40,6 +40,7 @@
 (check-day 15 10092 1509863)
 (check-day 16 [7036 45] [79404 451])
 (check-day 17 nil ["7,4,2,0,5,0,5,3,7" 202991746427434])
+(check-day 18 nil [384 "36,10"])
 
 
 (let [summary (run-tests)]
