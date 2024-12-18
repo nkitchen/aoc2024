@@ -68,4 +68,5 @@ Task                                                                 | Notebook 
 [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)     | [day13.clj](clojure/day13)  |             | Kosmo Cramer!
 [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [day14.clj](clojure/day14)  | viz, anim   | Christmas egg: Easter tree.
 [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)       | [day15.clj](clojure/day15)  | anim        | Sokoban.
+[Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)        | [day16.clj](clojure/day16)  | viz         | Dijkstra.
 
