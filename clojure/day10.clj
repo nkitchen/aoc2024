@@ -106,8 +106,9 @@
   (let [ends (atom [])]
     (aoc/bfs {:start trailhead
               :allow-revisits? true
-              :side-effect (fn [pt] (when (= 9 (grid pt))
-                                      (swap! ends conj pt)))
+              :side-effect (fn [{:keys [pt]}]
+                             (when (= 9 (grid pt))
+                               (swap! ends conj pt)))
               :nb-func (fn [pt]
                          (aoc/neighbours 4 pt (fn [nb]
                                                 (= (grid nb)

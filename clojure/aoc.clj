@@ -288,7 +288,7 @@
 
 (defn- build-path [current seen]
   (loop [curr current
-         path '()]
+         path nil]
     (if (or (nil? curr) (= :start curr))
       path
       (recur (first (seen curr)) (conj path curr)))))
@@ -325,13 +325,20 @@
                               (peek queue))
             nb-cost     (fn [pt] (+ steps (cost-fn current pt)))
             seen-filter (fn [pt] (or allow-revisits?
-                                     (< (nb-cost pt) (or (second (seen pt)) ##Inf))))]
+                                     (< (nb-cost pt) (or (second (seen pt))
+                                                         steps-limit))))]
+        (side-effect {:pt current
+                      :steps steps
+                      :seen seen
+                      :queue queue})
         (cond
           (or (nil? current)
               (>= steps steps-limit)
               (end-cond current)) {:steps   steps
                                    :seen    (set (keys seen))
+                                   :costs   (into {} (map (fn [[k [_ s]]] [k s]) seen))
                                    :count   (count seen)
+                                   :queue   queue
                                    :path    (build-path current seen)
                                    :current current}
           :else
@@ -339,7 +346,6 @@
                       (filter (every-pred nb-filter seen-filter) (nb-func current))
                       (neighbours nb-num current (every-pred nb-filter seen-filter)))
                 nbs+costs (map (fn [pt] [pt (nb-cost pt)]) nbs)]
-            (side-effect current)
             (recur
              (reduce (fn [q [pt cost]]
                        (case algo
