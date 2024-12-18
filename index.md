@@ -51,22 +51,23 @@ Ok, now we're ready for...
 
 ## AoC 2024
 
-Task                                                                 | Notebook                    | Extras      | Comment
----                                                                  | ---                         | ---         | ---
-[Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)     | [day01.clj](clojure/day01)  | viz, bench  | Much easier than Day 1 2023. I like it!
-[Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)      | [day02.clj](clojure/day02)  | viz         | The Problem Dampener would be useful for AoC!
-[Day 3: Mull It Over](https://adventofcode.com/2024/day/3)           | [day03.clj](clojure/day03)  | viz         | Regex and chill.
-[Day 4: Ceres Search](https://adventofcode.com/2024/day/4)           | [day04.clj](clojure/day04)  |             | No Más!
-[Day 5: Print Queue](https://adventofcode.com/2024/day/5)            | [day05.clj](clojure/day05)  |             | Easier than it looked initially.
-[Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)        | [day06.clj](clojure/day06)  | anim        | The guard is always right!
-[Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)          | [day07.clj](clojure/day07)  | bench       | Elephants ate my homework!
-[Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8)  | [day08.clj](clojure/day08)  | viz         | Hard to understand, easy to solve.
-[Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)        | [day09.clj](clojure/day09)  |             | Pt.2 was the hardest task so far.
-[Day 10: Hoof It](https://adventofcode.com/2024/day/10)              | [day10.clj](clojure/day10)  |             | Finally some pathfinding!
-[Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)    | [day11.clj](clojure/day11)  |             | Episode VI: Return of the Lanternfish
-[Day 12: Garden Groups](https://adventofcode.com/2024/day/12)        | [day12.clj](clojure/day12)  |             | Turns = sides.
-[Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)     | [day13.clj](clojure/day13)  |             | Kosmo Cramer!
-[Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)     | [day14.clj](clojure/day14)  | viz, anim   | Christmas egg: Easter tree.
-[Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)       | [day15.clj](clojure/day15)  | anim        | Sokoban.
-[Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)        | [day16.clj](clojure/day16)  | viz         | Dijkstra.
+Task                                                                    | Notebook                    | Extras      | Comment
+---                                                                     | ---                         | ---         | ---
+[Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)        | [day01.clj](clojure/day01)  | viz, bench  | Much easier than Day 1 2023. I like it!
+[Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)         | [day02.clj](clojure/day02)  | viz         | The Problem Dampener would be useful for AoC!
+[Day 3: Mull It Over](https://adventofcode.com/2024/day/3)              | [day03.clj](clojure/day03)  | viz         | Regex and chill.
+[Day 4: Ceres Search](https://adventofcode.com/2024/day/4)              | [day04.clj](clojure/day04)  |             | No Más!
+[Day 5: Print Queue](https://adventofcode.com/2024/day/5)               | [day05.clj](clojure/day05)  |             | Easier than it looked initially.
+[Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)           | [day06.clj](clojure/day06)  | anim        | The guard is always right!
+[Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)             | [day07.clj](clojure/day07)  | bench       | Elephants ate my homework!
+[Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8)     | [day08.clj](clojure/day08)  | viz         | Hard to understand, easy to solve.
+[Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)           | [day09.clj](clojure/day09)  |             | Pt.2 was the hardest task so far.
+[Day 10: Hoof It](https://adventofcode.com/2024/day/10)                 | [day10.clj](clojure/day10)  |             | Finally some pathfinding!
+[Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)       | [day11.clj](clojure/day11)  |             | Episode VI: Return of the Lanternfish
+[Day 12: Garden Groups](https://adventofcode.com/2024/day/12)           | [day12.clj](clojure/day12)  |             | Turns = sides.
+[Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)        | [day13.clj](clojure/day13)  |             | Kosmo Cramer!
+[Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)        | [day14.clj](clojure/day14)  | viz, anim   | Christmas egg: Easter tree.
+[Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)          | [day15.clj](clojure/day15)  | anim        | Sokoban.
+[Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)           | [day16.clj](clojure/day16)  | viz         | Dijkstra.
+[Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)  | [day17.clj](clojure/day17)  | bench       | Intcode meets Assembunny.
 
