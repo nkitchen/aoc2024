@@ -72,4 +72,5 @@ Task                                                                    | Notebo
 [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)  | [day17.clj](clojure/day17)  | bench       | Intcode meets Assembunny.
 [Day 18: RAM Run](https://adventofcode.com/2024/day/18)                 | [day18.clj](clojure/day18)  | viz         | [aMaze](https://narimiran.github.io/amaze/) :)
 [Day 19: Linen Layout](https://adventofcode.com/2024/day/19)            | [day19.clj](clojure/day19)  |             | Another easy one.
+[Day 20: Race Condition](https://adventofcode.com/2024/day/20)          | [day20.clj](clojure/day20)  |             | aMaze, again.
 
